@@ -1,16 +1,8 @@
+#![allow(dead_code)] // crate attribute. in main.rs because this is a binary.
 mod day_one;
-use std::env;
+mod day_two;
 
 fn main() {
-    let path = env::current_dir().unwrap();
-    println!("{:#?}", path);
-
-    println!(
-        "dayone partone: {}",
-        day_one::get_required_fuel_for_modules()
-    );
-    println!(
-        "dayone parttwo: {}",
-        day_one::get_required_fuel_for_modules_and_fuel()
-    );
+    println!("day_two first_star: {}", day_two::first_star());
+    println!("day_two second_star: {}", day_two::second_star());
 }
